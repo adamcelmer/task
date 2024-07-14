@@ -47,6 +47,6 @@ This script builds the Gradle project, and then runs `docker-compose up -d` comm
 ```
 
 ## Postman
-Postman collection can be found in the `/postman` directory. It contains a complete set of requests app endpoints together
+Postman collection can be found in the `/postman` directory. It contains a complete set of app endpoints together
 with before/after scripts to simplify authentication and subsequent requests. 
 I.e. note_id is stored in a variable after creation, so next `GET /api/notes/{id}` will contain that particular note.
