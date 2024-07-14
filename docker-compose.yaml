@@ -1,0 +1,22 @@
+services:
+  database-346:
+    build:
+      context: docker-compose/database
+    shm_size: 128mb
+    ports:
+      - 127.0.0.1:5432:5432
+    environment:
+      - POSTGRES_PASSWORD=password
+  app-346:
+    build:
+      context: backend
+    environment:
+      QUARKUS_PROFILE: dev
+      QUARKUS_DATASOURCE_JDBC_URL: jdbc:postgresql://database:5432/postit
+      QUARKUS_FLYWAY_JDBC_URL: jdbc:postgresql://database:5432/postit
+    depends_on:
+      - database-346
+    ports:
+      - 8091:8080
+    links:
+      - "database-346:database"

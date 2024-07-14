@@ -1,0 +1,3 @@
+quarkus:
+  test:
+    integration-test-profile=test

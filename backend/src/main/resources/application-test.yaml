@@ -1,0 +1,30 @@
+quarkus:
+  datasource:
+    db-kind: h2
+    username: magnolia
+    password: password
+  flyway:
+    db-kind: h2
+    username: magnolia
+    password: password
+  native:
+    resources:
+      includes: publicKey.pem
+  jwt:
+    verify:
+      publickey:
+        location: publicKey.pem
+      issuer: http://localhost:8081
+mp:
+  jwt:
+    verify:
+      publickey:
+        location: publicKey.pem
+      issuer: http://localhost:8081
+smallrye:
+  jwt:
+    sign:
+      key:
+        location: privateKey.pem
+app:
+  base-url: http://localhost:8081

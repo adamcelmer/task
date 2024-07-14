@@ -1,0 +1,16 @@
+quarkus:
+  flyway:
+    enabled: true
+    locations: db-migration
+    migrate-at-start: true
+  security:
+    events:
+      enabled: true
+  hibernate-orm:
+    database:
+      generation: none
+app:
+  base-url: http://localhost:8080
+  cleanup-scheduler:
+    cron: "0 0 3 * * ?"
+    expiration-days: 60
