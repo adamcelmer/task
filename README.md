@@ -32,14 +32,16 @@ Not all corner cases are covered by tests. Existing tests serve as an example an
 
 ### Build
 
+Quarkus app uses Gradle as a dependency manager. It can be build using:
 ```shell
 cd backend
 ./gradlew build
 ```
+`gradle` directory is commited to the repository to avoid Gradle requirement.
 
-### Quikck build & run
+### Quick build & run
 
-This script builds the Gradle project, and then runs `docker-compose up -d` command building & running images.
+This script builds the Gradle project, and then runs `docker-compose up -d` command building & running both database and app images.
 ```shell
 ./build-and-run.sh
 ```
