@@ -9,5 +9,5 @@ cd ${SCRIPT_DIR}/backend
 cd $SCRIPT_DIR
 docker compose up -d
 
-echo "PostIT app is running at http://localhost:8091\n"
+echo "PostIT app is running at http://localhost:8091"
 echo "You can use Postman collection located in the ${SCRIPT_DIR}/postman directory"

@@ -3,10 +3,14 @@ quarkus:
     db-kind: h2
     username: magnolia
     password: password
+    jdbc:
+      url: jdbc:h2:mem:test;DB_CLOSE_DELAY=-1
   flyway:
     db-kind: h2
     username: magnolia
     password: password
+    jdbc:
+      url: jdbc:h2:mem:test;DB_CLOSE_DELAY=-1
   native:
     resources:
       includes: publicKey.pem
